@@ -12,24 +12,26 @@
 function Header() {
 	//Creating Header div and adding class of .header
 	const div1 = document.createElement('div');
-	div1.classList.add('header');
-
-	//Creating dateHere for date contained in span
 	const dateHere = document.createElement('span');
-	dateHere.classList.add('date');
-	dateHere.textContent = 'SMARCH 28, 2019';
-	div1.append(dateHere);
-
-	// h1 to hold Lambda Times Text
 	const titleH1 = document.createElement('h1');
+	const tempHere = document.createElement('span');
+
+	//adding css classes already defined to the elements in the DOM
+	div1.classList.add('header');
+	dateHere.classList.add('date');
+	tempHere.classList.add('temp');
+
+	//creating text content for elements
+	dateHere.textContent = 'SMARCH 28, 2019';
 	titleH1.textContent = 'Lambda Times';
+	tempHere.textContent = '98°';
+
+	//append created elements to div1 the parent container for the header
+	div1.append(dateHere);
 	div1.append(titleH1);
+	div1.append(tempHere);
 
-	//Span to hold temperature
-	const temp = document.createElement('span');
-	temp.textContent = '98°';
-	div1.append('temp');
-
+	//return div1 so it can be utilized
 	return div1;
 }
 
