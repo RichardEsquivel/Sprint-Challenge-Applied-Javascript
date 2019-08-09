@@ -21,7 +21,6 @@
 //creating axios.get in order to create a component for each article in the list
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then((response) => {
-	console.log(response);
 	Object.values(response.data.articles).forEach((responses) => {
 		responses.forEach((responses) => {
 			const buildsCards = document.querySelector('.cards-container');
